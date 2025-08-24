@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ورشة الإتقان للدهان ✨</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #0a1930 0%, #1a365d 100%);
+            color: #fff;
+            line-height: 1.6;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(10, 25, 48, 0.8);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+        
+        header {
+            text-align: center;
+            padding: 30px 0;
+            margin-bottom: 30px;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+        }
+        
+        .logo {
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+            color: #d4af37;
+            text-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: #d4af37;
+            font-weight: 700;
+        }
+        
+        .subtitle {
+            font-size: 1.3rem;
+            color: #e2e8f0;
+            margin-bottom: 20px;
+        }
+        
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+        
+        .service-card {
+            background: rgba(26, 54, 93, 0.7);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            backdrop-filter: blur(10px);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            border-color: rgba(212, 175, 55, 0.6);
+        }
+        
+        .service-icon {
+            font-size: 2.5rem;
+            color: #d4af37;
+            margin-bottom: 15px;
+        }
+        
+        .service-title {
+            font-size: 1.5rem;
+            margin-bottom: 12px;
+            color: #d4af37;
+        }
+        
+        .service-desc {
+            color: #cbd5e0;
+            font-size: 1.1rem;
+        }
+        
+        .contact-section {
+            text-align: center;
+            padding: 40px 0;
+            margin-top: 50px;
+            background: rgba(10, 25, 48, 0.7);
+            border-radius: 15px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+        
+        .contact-title {
+            font-size: 2.2rem;
+            margin-bottom: 25px;
+            color: #d4af37;
+        }
+        
+        .phone {
+            display: inline-block;
+            background: linear-gradient(135deg, #d4af37 0%, #b39330 100%);
+            color: #0a1930;
+            font-size: 1.8rem;
+            font-weight: 700;
+            padding: 15px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+        }
+        
+        .phone:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.4);
+        }
+        
+        .phone i {
+            margin-left: 10px;
+        }
+        
+        .decoration {
+            text-align: center;
+            margin: 30px 0;
+            font-size: 2rem;
+            color: #d4af37;
+            opacity: 0.7;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px;
+            margin-top: 50px;
+            color: #cbd5e0;
+            font-size: 1rem;
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+        }
+        
+        .instructions {
+            background: rgba(26, 54, 93, 0.7);
+            border-radius: 12px;
+            padding: 25px;
+            margin: 30px 0;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+        
+        .instructions h2 {
+            color: #d4af37;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .instructions ol {
+            padding-right: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .instructions li {
+            margin-bottom: 15px;
+            color: #cbd5e0;
+            font-size: 1.1rem;
+        }
+        
+        .instructions code {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .phone {
+                font-size: 1.4rem;
+                padding: 12px 25px;
+            }
+            
+            .services {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-paint-roller"></i>
+            </div>
+            <h1>ورشة الإتقان للدهان</h1>
+            <p class="subtitle">جودة فائقة و إبداع لا حدود له في عالم الدهان والديكور</p>
+        </header>
+        
+        <div class="instructions">
+            <h2>كيفية حفظ هذا الملف</h2>
+            <ol>
+                <li>انقر بزر الماوس الأيمن فوق أي مكان في الصفحة</li>
+                <li>اختر "View Page Source" أو "عرض مصدر الصفحة"</li>
+                <li>انسخ كل النص الموجود</li>
+                <li>افتح برنامج المفكرة (Notepad) أو أي محرر نصوص</li>
+                <li>الصق النص الذي نسخته</li>
+                <li>من قائمة "File" اختر "Save As"</li>
+                <li>اسم الملف: <code>itqan-painting.html</code></li>
+                <li>اختر نوع الملف: "All Files" أو "جميع الملفات"</li>
+                <li>اختر المكان الذي تريد حفظ الملف فيه</li>
+                <li>انقر "Save"</li>
+                <li>ابحث عن الملف وانقر عليه نقرًا مزدوجًا لفتحه في المتصفح</li>
+            </ol>
+        </div>
+        
+        <div class="services">
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-home"></i>
+                </div>
+                <h3 class="service-title">دهان منازل 🏠</h3>
+                <p class="service-desc">نقدم خدمات دهان المنازل والديكورات الداخلية بأحدث الألوان والتصاميم العصرية التي تناسب ذوقك الرفيع.</p>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-building"></i>
+                </div>
+                <h3 class="service-title">دهان واجهات 🏢</h3>
+                <p class="service-desc">تجديد واجهات المباني باستخدام أفضل أنواع الدهانات المقاومة للعوامل الجوية مع ضمان متانة وجمال التصميم.</p>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-paint-brush"></i>
+                </div>
+                <h3 class="service-title">ديكور 🎨</h3>
+                <p class="service-desc">تصميم وتنفيذ أحدث الديكورات الداخلية والخارجية بأفكار إبداعية ومبتكرة تناسب مساحتك واحتياجاتك.</p>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-tools"></i>
+                </div>
+                <h3 class="service-title">ترميم 🛠️</h3>
+                <p class="service-desc">خدمات الترميم الشامل للمباني القديمة وتجديدها مع الحفاظ على الهوية المعمارية الأصيلة.</p>
+            </div>
+        </div>
+        
+        <div class="decoration">
+            ✨ ✨ ✨
+        </div>
+        
+        <div class="contact-section">
+            <h2 class="contact-title">للتواصل والحجز</h2>
+            <a href="tel:+963998842799" class="phone">
+                <i class="fas fa-phone"></i> +963 998 842 799
+            </a>
+        </div>
+        
+        <footer>
+            <p>© 2023 ورشة الإتقان للدهان. جميع الحقوق محفوظة.</p>
+        </footer>
+    </div>
+
+    <script>
+        // إضافة تأثيرات تفاعلية بسيطة
+        document.addEventListener('DOMContentLoaded', function() {
+            const serviceCards = document.querySelectorAll('.service-card');
+            
+            serviceCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    this.classList.toggle('active');
+                });
+            });
+            
+            // تأثير كتابة للعنوان الرئيسي
+            const title = document.querySelector('h1');
+            const originalText = title.textContent;
+            title.textContent = '';
+            let i = 0;
+            
+            function typeWriter() {
+                if (i < originalText.length) {
+                    title.textContent += originalText.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, 100);
+                }
+            }
+            
+            setTimeout(typeWriter, 500);
+        });
+    </script>
+</body>
+</html>
